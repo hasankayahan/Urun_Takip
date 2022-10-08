@@ -52,7 +52,7 @@ namespace Urun_Takip
             komut3.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut3.Parameters.AddWithValue("@p2", NudStok.Value);
             komut3.Parameters.AddWithValue("@p3",TxtAlisFiyat.Text);
-            komut3.Parameters.AddWithValue("@p4", TxtSatisFiyat.Text);
+            komut3.Parameters.AddWithValue("@p4", TxtSatifFiyat.Text);
             komut3.Parameters.AddWithValue("@p5", comboBox1.SelectedValue);
             komut3.ExecuteNonQuery();
             baglanti.Close();
@@ -77,7 +77,7 @@ namespace Urun_Takip
             komut5.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut5.Parameters.AddWithValue("@p2", NudStok.Value);
             komut5.Parameters.AddWithValue("@p3",decimal.Parse( TxtAlisFiyat.Text));
-            komut5.Parameters.AddWithValue("@p4", decimal.Parse(TxtSatisFiyat.Text));
+            komut5.Parameters.AddWithValue("@p4", decimal.Parse(TxtSatifFiyat.Text));
             komut5.Parameters.AddWithValue("@p5", comboBox1.SelectedValue);
             komut5.Parameters.AddWithValue("@p6", TxtId.Text);
             komut5.ExecuteNonQuery();
@@ -92,7 +92,7 @@ namespace Urun_Takip
             TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             NudStok.Value =int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
             TxtAlisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            TxtSatisFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            TxtSatifFiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             comboBox1.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
